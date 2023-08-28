@@ -1,0 +1,54 @@
+.el_input1{
+    background-color: #f0f0f0;
+    width: 20px;
+    margin-bottom: 20px;
+}
+.el_menu1{
+    background-color: #999999;
+
+}
+.dialog-container1 {
+    width: 80%;
+
+}
+.selectOption1{
+    width: 100px;
+    height: 40px;
+    float: left;
+}
+.selectOption1 {
+    appearance: none;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+    width: 200px;
+}
+
+.selectOption1:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.selectOption1 option {
+    background-color: #fff;
+    color: #333;
+}
+
+.selectOption1 option:checked {
+    background-color: #007bff;
+    color: #fff;
+}
+.container {
+    display: flex;
+    justify-content: center; /* 水平居中对齐 */
+    align-items: flex-start; /* 垂直居上对齐 */
+}
+
+.select-container,
+.input-container {
+    margin-right: 10px; /* 设置两个容器之间的间距 */
+}

@@ -1,0 +1,10 @@
+html,body,div{
+    margin: 0;
+    padding:0;
+
+}
+html,body{
+    height: 100%;
+}
+.kub-mobileWidth { width: 60%; }
+@media (max-width: 768px) { .kub-mobileWidth { width: 98%; } }
