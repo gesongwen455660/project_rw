@@ -16,7 +16,7 @@
     </div>
   </div>
 </template>
-
+import { Message } from 'element-ui';
 <script>
 export default {
   name: "Login",
@@ -32,8 +32,17 @@ export default {
       this.name = "";
       this.password = "";
     },
-    login(){
-
+    login() {
+      // 在这里进行账号密码验证
+      if (this.name === 'admin' && this.password === '123456') {
+        // 登录验证通过，跳转到 admin 页面
+        this.$loginSuccess();
+        this.$message.success('登陆成功!');
+        this.$router.push('/admin');
+      } else {
+        // 登录验证失败，做相应的提示或处理
+        this.$message.error('账号或密码错误!');
+      }
     }
 
   },

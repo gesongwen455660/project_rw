@@ -1,6 +1,7 @@
 package com.newproduct.springboot.mapper;
 
 import com.newproduct.springboot.entity.Product;
+import com.newproduct.springboot.entity.ProductOld;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
@@ -22,13 +23,18 @@ public interface ProductMapper {
 
 
 
-    @Select("select * from product where (type = #{type} or #{type} is null or #{type} = '') AND sku like #{sku} limit #{pageNum}, #{pageSize}")
-    //@Select("select * from product where type = #{type} AND sku like #{sku} limit #{pageNum}, #{pageSize}") //here sku like #{sku}
-    List<Product> selectPage(Integer pageNum, Integer pageSize, String sku, String type); //String sku
+    @Select("select * from product where (type = #{type} or #{type} is null or #{type} = '') AND sku like #{sku} AND factory like concat('%' ,#{factory} ,'%') limit #{pageNum}, #{pageSize}")
+    List<Product> selectPage(Integer pageNum, Integer pageSize, String sku, String factory, String type); //String sku
 
-    @Select("select count(id) from product where (type = #{type} or #{type} is null or #{type} = '') AND sku like concat('%' ,#{sku} ,'%')") //
-    Integer selectTotal(String sku,String type); //String sku
+    @Select("select count(id) from product where (type = #{type} or #{type} is null or #{type} = '') AND sku like concat('%' ,#{sku} ,'%') AND factory like concat('%' ,#{factory} ,'%')") //
+    Integer selectTotal(String sku, String factory, String type); //String sku
 
+
+    @Select("select * from productold where (type = #{type} or #{type} is null or #{type} = '') AND sku like #{sku}  limit #{pageNum}, #{pageSize}")
+    List<ProductOld> selectPageBase(Integer pageNum, Integer pageSize, String sku, String type); //String sku
+
+    @Select("select count(id) from productold where (type = #{type} or #{type} is null or #{type} = '') AND sku like concat('%' ,#{sku} ,'%')") //
+    Integer selectTotalBase(String sku,String type); //String sku
 
 
 }

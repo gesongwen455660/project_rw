@@ -1,0 +1,52 @@
+package com.newproduct.springboot.DTO;
+
+import lombok.Data;
+import org.springframework.web.multipart.MultipartFile;
+@Data
+public class SaveDataDTO {
+        private MultipartFile file1;
+        private MultipartFile file2;
+        private MultipartFile file3;
+        private String factorySubmit;
+        private String skuSubmit;
+        private String url1Submit;
+        private String url2Submit;
+        private String fbaSubmit;
+        private String fbmSubmit;
+        private String fulfillmentfeeamazonSubmit;
+        private String fulfillmentfeeoutseaSubmit;
+        private String productlenghcm1Submit;
+        private String productlenghcm2Submit;
+        private String productshortlenghcmSubmit;
+        private String outboxlenghcm1Submit;
+        private String outboxlenghcm2Submit;
+        private String outboxshortlenghcmSubmit;
+        private String weightkg1Submit;
+        private String weightkg2Submit;
+        private String productlenghinch1Submit;
+        private String productlenghinch2Submit;
+        private String productshortlenghinchSubmit;
+        private String outboxlenghinch1Submit;
+        private String outboxlenghinch2Submit;
+        private String outboxshortlenghinchSubmit;
+        private String weightlb1Submit;
+        private String weightlb2Submit;
+        private String quantityhqSubmit;
+        private String quantitySubmit;
+        private String inboxlenghinch1Submit;
+        private String inboxlenghinch2Submit;
+        private String inboxshortlenghinchSubmit;
+        private String inboxweightlb1Submit;
+        private String inboxweightlb2Submit;
+        private String inboxlenghcm1Submit;
+        private String inboxlenghcm2Submit;
+        private String inboxshortlenghcmSubmit;
+        private String inboxweightkg1Submit;
+        private String inboxweightkg2Submit;
+        private String minlenghinchheightSubmit;
+        private String minlenghinchwidthSubmit;
+        private String minlenghinchhighSubmit;
+        private String minweight1Submit;
+        private String minweight2Submit;
+        private String typeSubmit;
+}

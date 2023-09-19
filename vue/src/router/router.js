@@ -4,6 +4,7 @@ import HomeView from '@/views/HomeView.vue';
 import PublicPage from '@/views/PublicPage.vue';
 import Login from "@/views/Login.vue";
 import OrderDemo from "@/views/OrderDemo";
+import Supplier from "@/views/Supplier";
 Vue.use(Router);
 
 const router = new Router({
@@ -31,6 +32,11 @@ const router = new Router({
             path: '/orderDemo',
             name: 'orderDemo',
             component: OrderDemo
+        },
+        {
+            path: '/supplier',
+            name: 'supplier',
+            component: Supplier
         },
     ]
 });

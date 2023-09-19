@@ -1,7 +1,7 @@
 .el_input1{
     background-color: #f0f0f0;
     width: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .el_menu1{
     background-color: #999999;
@@ -44,11 +44,28 @@
 }
 .container {
     display: flex;
-    justify-content: center; /* 水平居中对齐 */
-    align-items: flex-start; /* 垂直居上对齐 */
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .select-container,
 .input-container {
     margin-right: 10px; /* 设置两个容器之间的间距 */
 }
+.custom-table .el-table__row:nth-child(odd) {
+    background-color: #F0F8FF; /* 设置奇数行背景颜色 */
+
+}
+
+.custom-table .el-table__row:nth-child(even) {
+    background-color: #F8F8FF; /* 设置偶数行背景颜色 */
+
+}
+.fixed-horizontal-scrollbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-x: auto;
+}
+
